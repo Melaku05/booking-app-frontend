@@ -11,24 +11,24 @@ const signInRequest = (data) => {
 };
 
 // Thunk
-export const signIn = (email, password) => (dispatch) => {
+const signIn = (username, email, password) => (dispatch) => {
   const params = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      email: email,
-      password: password,
+      user: {
+        username: username,
+        email: email,
+        password: password,
+      },
     }),
   };
-  fetch('http://localhost:3000/users', params)
+  fetch('http://localhost:3000/users/sign_in', params)
     .then((res) => {
-      if (res.status === 200) {
-        return res.json();
-      } else {
-        throw new Error('Invalid credentials');
-      }
+      localStorage.setItem('token', JSON.stringify(res.headers.get('Authorization')));
+      return res.json();
     })
     .then((data) => {
       dispatch(signInRequest(data));
@@ -39,7 +39,9 @@ export const signIn = (email, password) => (dispatch) => {
 };
 
 // Reducer
-const reducer = (state = [], action = {}) => {
+const initialState = {};
+
+const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case SIGNIN_REQUEST:
       return action.payload;
