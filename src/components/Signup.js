@@ -7,12 +7,12 @@ const Signup = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // const username = e.target[0].value;
-    // const email = e.target[1].value;
-    // const password = e.target[2].value;
-    // console.log(username, email, password);
-    // dispatch(signIn(username, email, password));
+    e.preventDefault();
+    const username = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    console.log(username, email, password);
+    dispatch(signUp(username, email, password));
   };
 
   return (
