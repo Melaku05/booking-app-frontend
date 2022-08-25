@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDoctors } from '../redux/doctors/doctors';
-
+import { signOut } from '../redux/login/signout';
 const Home = () => {
   const doctor = useSelector((state) => state.doctor);
   const dispatch = useDispatch();
@@ -32,6 +32,7 @@ const Home = () => {
           ))}
         </div>
       )}
+      <button onClick={() => dispatch(signOut())}>Sign Out</button>
     </div>
   );
 };

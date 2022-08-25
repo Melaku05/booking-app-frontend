@@ -20,6 +20,7 @@ const signOut = () => (dispatch) => {
     },
   })
     .then((res) => {
+      localStorage.removeItem('token');
       if (res.status === 200) {
         return res.json();
       } else {
