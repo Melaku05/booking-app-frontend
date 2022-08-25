@@ -27,7 +27,7 @@ const signIn = (username, email, password) => (dispatch) => {
   };
   fetch('http://localhost:3000/users/sign_in', params)
     .then((res) => {
-      localStorage.setItem('token', JSON.stringify(res.headers.get('Authorization')));
+      localStorage.setItem('token', res.headers.get('Authorization'));
       return res.json();
     })
     .then((data) => {
@@ -41,7 +41,7 @@ const signIn = (username, email, password) => (dispatch) => {
 // Reducer
 const initialState = {};
 
-const reducer = (state = initialState, action = {}) => {
+const signinReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case SIGNIN_REQUEST:
       return action.payload;
@@ -50,5 +50,5 @@ const reducer = (state = initialState, action = {}) => {
   }
 };
 
-export default reducer;
+export default signinReducer;
 export { signInRequest, signIn };
