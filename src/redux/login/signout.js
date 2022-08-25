@@ -11,7 +11,7 @@ const signOutRequest = (user) => {
 };
 
 // Thunk
-export const signOut = () => (dispatch) => {
+const signOut = () => (dispatch) => {
   fetch('http://localhost:3000/users/signout', {
     method: 'DELETE',
     headers: {
