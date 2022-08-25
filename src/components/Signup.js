@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { signUp } from '../redux/login/signup';
-
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -21,6 +21,7 @@ const Signup = () => {
         <input type="text" placeholder="username" />
         <input type="email" placeholder="email" />
         <input type="password" placeholder="password" />
+        <input type="password" placeholder="password confirmation" />
         <button type="submit">Sign Up</button>
       </form>
       <div>
