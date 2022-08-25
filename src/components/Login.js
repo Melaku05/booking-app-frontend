@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { signIn } from '../redux/login/signin';
+import { signOut } from '../redux/login/signout';
 
 const Login = () => {
-  const login = useSelector((state) => state.login);
+  // const login = useSelector((state) => state.login);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log(login);
-  }, [login]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +24,7 @@ const Login = () => {
         <input type="password" placeholder="password" />
         <button type="submit">Login</button>
       </form>
+      <button onClick={() => dispatch(signOut())}>Sign Out</button>
     </div>
   );
 };

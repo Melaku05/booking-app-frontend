@@ -12,10 +12,11 @@ const signOutRequest = (user) => {
 
 // Thunk
 const signOut = () => (dispatch) => {
-  fetch('http://localhost:3000/users/signout', {
+  fetch('http://localhost:3000/users/sign_out', {
     method: 'DELETE',
     headers: {
       'Content-Type': '*/*',
+      Authorization: localStorage.getItem('token'),
     },
   })
     .then((res) => {
