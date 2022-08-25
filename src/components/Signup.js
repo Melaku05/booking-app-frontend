@@ -23,6 +23,12 @@ const Signup = () => {
         <input type="password" placeholder="password" />
         <button type="submit">Sign Up</button>
       </form>
+      <div>
+        <p>
+          Already have an account?
+          <Link to="/">Log In</Link>
+        </p>
+      </div>
     </div>
   );
 };
