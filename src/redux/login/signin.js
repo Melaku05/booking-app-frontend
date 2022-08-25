@@ -11,7 +11,7 @@ const signInRequest = (data) => {
 };
 
 // Thunk
-const signIn = (username, email, password) => (dispatch) => {
+const signIn = (email, password) => (dispatch) => {
   const params = {
     method: 'POST',
     headers: {
@@ -19,7 +19,6 @@ const signIn = (username, email, password) => (dispatch) => {
     },
     body: JSON.stringify({
       user: {
-        username: username,
         email: email,
         password: password,
       },

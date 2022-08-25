@@ -12,21 +12,17 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* <Login />
-      <Home />
-      <Signup />
-    </> */}
-    <BrowserRouter>
-    <Login />
-    <Routes>
-      <Route path="/" element={(<Home />)} />
-      <Route path="/reservations" element={(<Reservations />)} />
-      <Route path="/myreservation" element={(<MyReservation />)} />
-      <Route path="/details" element={(<Details />)} />
-      <Route path="/signup" element={(<Signup />)} />
-    </Routes>
-  </BrowserRouter>
-</>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/myreservation" element={<MyReservation />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
