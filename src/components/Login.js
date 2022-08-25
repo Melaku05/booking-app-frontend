@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { signIn } from '../redux/login/signin';
 import { signOut } from '../redux/login/signout';
 
@@ -25,6 +26,12 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
       <button onClick={() => dispatch(signOut())}>Sign Out</button>
+      <div>
+        <p>
+          Don&apos;t have an account yet?
+          <Link to="/signup">Sign Up</Link>
+        </p>
+      </div>
     </div>
   );
 };
