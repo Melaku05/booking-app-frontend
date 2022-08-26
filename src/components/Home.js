@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Navigation />
-      <div>
+      <div className="z-0 pt-24">
         {doctor.data.error && <h1>{doctor.data.error}</h1>}
         {doctor.data.error === undefined && (
         <div>
