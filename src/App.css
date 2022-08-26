@@ -3,4 +3,7 @@
     linear-gradient(to right, #96bf01, #85b500),
     url(./images/doctor.jpg) no-repeat center center;
   background-size: cover;
+
+.App {
+  text-align: center;
 }
