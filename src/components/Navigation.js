@@ -25,14 +25,14 @@ const Navigation = () => {
           </span>
         </button>
         <div aria-label="toggler" className="flex items-center justify-center">
-          <button type="button" id="open" aria-label="open" onClick={() => setShow(!show)} className={`${show ? '' : 'hidden'} focus:outline-none focus:ring-2 `}>
+          <button type="button" id="open" aria-label="open" onClick={() => setShow(!show)} className={`${show ? 'hidden' : ''} focus:outline-none focus:ring-2 `}>
             <svg className="text-doctor" width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 6H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M4 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M4 18H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          <button type="button" id="close" aria-label="close" onClick={() => setShow(!show)} className={`${show ? 'hidden' : ''} focus:outline-none focus:ring-2  `}>
+          <button type="button" id="close" aria-label="close" onClick={() => setShow(!show)} className={`${show ? '' : 'hidden'} focus:outline-none focus:ring-2  `}>
             <svg className="text-indigo-200" width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M6 6L18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -41,7 +41,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div id="Main" className={`${show ? '-translate-x-full' : 'translate-x-0'} bg-navbar border transform  xl:translate-x-0 shadow xl:rounded-r fixed h-full top-22 sm:z-20 bg-white  ease-in-out transition duration-500 flex justify-start items-start w-full sm:w-64 flex-col `}>
+      <div id="Main" className={`${show ? '-translate-x-0' : 'translate-x-full'} bg-navbar border transform  xl:translate-x-0 shadow xl:rounded-r fixed h-full top-22 sm:z-20 bg-white  ease-in-out transition duration-500 flex justify-start items-start w-full sm:w-64 md:w-full xl:w-64 flex-col `}>
         <button type="button" className="items-center justify-start hidden w-full p-6 space-x-3 text-white focus:outline-none hover:text-indigo-200 focus:text-indigo-200 sm:flex">
           <span className="flex items-center justify-between text-xl leading-6 text-menu">
             Booking
