@@ -64,7 +64,7 @@ const Login = () => {
               </div>
               <div className="mt-8">
                 <button type="submit" aria-label="create my account" className="w-full py-4 text-sm font-semibold leading-none text-white border rounded-full bg-menu focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none hover:bg-indigo-600">
-                  Create my account
+                  Login
                 </button>
               </div>
             </form>
