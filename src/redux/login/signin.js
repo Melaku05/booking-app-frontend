@@ -28,6 +28,7 @@ const signIn = (email, password) => (dispatch) => {
       return res.json();
     })
     .then((data) => {
+      localStorage.setItem('user', JSON.stringify(data));
       dispatch(signInRequest(data));
     })
     .catch((err) => {
