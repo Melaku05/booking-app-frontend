@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDoctors } from '../redux/doctors/doctors';
 import { signOut } from '../redux/login/signout';
+import Navigation from './Navigation';
 
 const Home = () => {
   const doctor = useSelector((state) => state.doctor);
@@ -12,9 +13,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      {doctor.data.error && <h1>{doctor.data.error}</h1>}
-      {doctor.data.error === undefined && (
+    <>
+      <Navigation />
+      <div>
+        {doctor.data.error && <h1>{doctor.data.error}</h1>}
+        {doctor.data.error === undefined && (
         <div>
           {doctor.data.map((doc) => (
             <div key={doc.id}>
@@ -50,9 +53,10 @@ const Home = () => {
             </div>
           ))}
         </div>
-      )}
-      <button type="button" onClick={() => dispatch(signOut())}>Sign Out</button>
-    </div>
+        )}
+        <button type="button" onClick={() => dispatch(signOut())}>Sign Out</button>
+      </div>
+    </>
   );
 };
 
