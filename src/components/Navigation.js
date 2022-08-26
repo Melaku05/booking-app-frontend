@@ -19,8 +19,8 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between w-full p-6 border-b border-transparent rounded-r shadow bg-navbar xl:hidden sm:border-gray-200 ">
-        <button type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
+      <div className="fixed sm:z-10 flex items-center justify-between w-full p-6 border-b border-transparent rounded-r shadow bg-navbar xl:hidden sm:border-gray-200 ">
+        <Link to="/home" type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
           <span className="flex items-center justify-between text-2xl leading-6 text-menu">
             Booking
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-vaccine text-doctor" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#7bc62d" fill="orange" strokeLinecap="round" strokeLinejoin="round">
@@ -53,8 +53,8 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div id="Main" className={`${show ? '-translate-x-0' : 'translate-x-full'} bg-navbar border transform  xl:translate-x-0 shadow xl:rounded-r fixed h-full top-22 sm:z-20 bg-white  ease-in-out transition duration-500 flex justify-start items-start w-full sm:w-64 md:w-full xl:w-64 flex-col `}>
-        <button type="button" className="items-center justify-start hidden w-full p-6 space-x-3 text-white focus:outline-none hover:text-indigo-200 focus:text-indigo-200 sm:flex">
+      <div id="Main" className={`${show ? '-translate-x-0' : 'translate-x-full'} mt-24 xl:mt-0 bg-navbar border transform  xl:translate-x-0 shadow xl:rounded-r fixed h-full top-22 sm:z-20 bg-white  ease-in-out transition duration-500 flex justify-start items-start w-full sm:w-64 md:w-full xl:w-64 flex-col `}>
+        <Link to="/home" type="button" className="items-center justify-start hidden w-full p-6 space-x-3 text-white focus:outline-none hover:text-indigo-200 focus:text-indigo-200 sm:flex">
           <span className="flex items-center justify-between text-xl leading-6 text-menu">
             Booking
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-vaccine text-doctor" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#7bc62d" fill="orange" strokeLinecap="round" strokeLinejoin="round">
