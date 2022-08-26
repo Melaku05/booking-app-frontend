@@ -1,14 +1,12 @@
 const SIGNUP_REQUEST = 'booking-app-frontend/signup/SIGNUP_REQUEST';
 
 // Action Creators
-const signUpRequest = (data) => {
-  return {
-    type: SIGNUP_REQUEST,
-    payload: {
-      data,
-    },
-  };
-};
+const signUpRequest = (data) => ({
+  type: SIGNUP_REQUEST,
+  payload: {
+    data,
+  },
+});
 
 // Thunk
 const signUp = (username, email, password) => (dispatch) => {
@@ -19,9 +17,9 @@ const signUp = (username, email, password) => (dispatch) => {
     },
     body: JSON.stringify({
       user: {
-        username: username,
-        email: email,
-        password: password,
+        username,
+        email,
+        password,
       },
     }),
   };
@@ -34,7 +32,7 @@ const signUp = (username, email, password) => (dispatch) => {
       dispatch(signUpRequest(data));
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err);
     });
 };
 

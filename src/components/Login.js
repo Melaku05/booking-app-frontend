@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signIn } from '../redux/login/signin';
-import { signOut } from '../redux/login/signout';
 
 const Login = () => {
   // const login = useSelector((state) => state.login);
@@ -12,7 +11,6 @@ const Login = () => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
-    console.log(email, password);
     dispatch(signIn(email, password));
   };
 
@@ -23,7 +21,6 @@ const Login = () => {
         <input type="password" placeholder="password" />
         <button type="submit">Login</button>
       </form>
-      <button onClick={() => dispatch(signOut())}>Sign Out</button>
       <div>
         <p>
           Don&apos;t have an account yet?

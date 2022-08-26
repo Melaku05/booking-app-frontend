@@ -1,14 +1,12 @@
 const SIGNIN_REQUEST = 'booking-app-frontend/signin/SIGNIN_REQUEST';
 
 // Action Creators
-const signInRequest = (data) => {
-  return {
-    type: SIGNIN_REQUEST,
-    payload: {
-      data,
-    },
-  };
-};
+const signInRequest = (data) => ({
+  type: SIGNIN_REQUEST,
+  payload: {
+    data,
+  },
+});
 
 // Thunk
 const signIn = (email, password) => (dispatch) => {
@@ -19,8 +17,8 @@ const signIn = (email, password) => (dispatch) => {
     },
     body: JSON.stringify({
       user: {
-        email: email,
-        password: password,
+        email,
+        password,
       },
     }),
   };
@@ -33,7 +31,7 @@ const signIn = (email, password) => (dispatch) => {
       dispatch(signInRequest(data));
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err);
     });
 };
 

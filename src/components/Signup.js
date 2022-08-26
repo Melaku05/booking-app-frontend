@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { signUp } from '../redux/login/signup';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { signUp } from '../redux/login/signup';
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,6 @@ const Signup = () => {
     const username = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
-    console.log(username, email, password);
     dispatch(signUp(username, email, password));
   };
 

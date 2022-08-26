@@ -1,14 +1,12 @@
 const SIGNOUT_REQUEST = 'booking-app-frontend/signout/SIGNOUT_REQUEST';
 
 // Action Creators
-const signOutRequest = (user) => {
-  return {
-    type: SIGNOUT_REQUEST,
-    payload: {
-      user,
-    },
-  };
-};
+const signOutRequest = (user) => ({
+  type: SIGNOUT_REQUEST,
+  payload: {
+    user,
+  },
+});
 
 // Thunk
 const signOut = () => (dispatch) => {
@@ -23,15 +21,14 @@ const signOut = () => (dispatch) => {
       localStorage.removeItem('token');
       if (res.status === 200) {
         return res.json();
-      } else {
-        throw new Error('An error occurred');
       }
+      throw new Error('An error occurred');
     })
     .then((user) => {
       dispatch(signOutRequest(user));
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err);
     });
 };
 

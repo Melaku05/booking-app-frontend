@@ -1,14 +1,12 @@
 const GET_DOCTORS = 'booking-app-frontend/doctor/GET_DOCTORS';
 
 // Action Creators
-const doctorRequest = (data) => {
-  return {
-    type: GET_DOCTORS,
-    payload: {
-      data,
-    },
-  };
-};
+const doctorRequest = (data) => ({
+  type: GET_DOCTORS,
+  payload: {
+    data,
+  },
+});
 
 // Thunk
 const getDoctors = () => (dispatch) => {
@@ -19,14 +17,12 @@ const getDoctors = () => (dispatch) => {
     },
   };
   fetch('http://localhost:3000/doctors', params)
-    .then((res) => {
-      return res.json();
-    })
+    .then((res) => res.json())
     .then((data) => {
       dispatch(doctorRequest(data));
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err);
     });
 };
 
