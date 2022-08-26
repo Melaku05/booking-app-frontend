@@ -24,11 +24,15 @@ const signIn = (email, password) => (dispatch) => {
   };
   fetch('http://localhost:3000/users/sign_in', params)
     .then((res) => {
-      localStorage.setItem('token', res.headers.get('Authorization'));
+      if (res.status === 200) {
+        localStorage.setItem('token', res.headers.get('Authorization'));
+      }
       return res.json();
     })
     .then((data) => {
-      localStorage.setItem('user', JSON.stringify(data));
+      if (data.user) {
+        localStorage.setItem('user', JSON.stringify(data));
+      }
       dispatch(signInRequest(data));
     })
     .catch((err) => {
