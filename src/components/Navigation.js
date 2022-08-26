@@ -7,7 +7,7 @@ const Navigation = () => {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <div className="bg-navbar rounded-r shadow xl:hidden flex justify-between w-full p-6 items-center border-b border-transparent sm:border-gray-200 ">
+      <div className="bg-navbar fixed rounded-r shadow xl:hidden flex justify-between w-full p-6 items-center border-b border-transparent sm:border-gray-200 ">
         <button type="button" className="flex text-white hover:text-doctor focus:outline-none focus:text-indigo-200 justify-between  items-center space-x-3">
           <span className="text-2xl flex leading-6 text-menu justify-between items-center">
             Booking
