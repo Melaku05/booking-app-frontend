@@ -17,15 +17,11 @@ const signOut = () => (dispatch) => {
       Authorization: localStorage.getItem('token'),
     },
   })
-    .then((res) => {
-      localStorage.removeItem('token');
-      if (res.status === 200) {
-        return res.json();
-      }
-      throw new Error('An error occurred');
-    })
+    .then((res) => res.json())
     .then((user) => {
       dispatch(signOutRequest(user));
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
     })
     .catch((err) => {
       throw new Error(err);

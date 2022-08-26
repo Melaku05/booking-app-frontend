@@ -1,17 +1,25 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signIn } from '../redux/login/signin';
 
 const Login = () => {
-  // const login = useSelector((state) => state.login);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  // redirect to home page if user is already logged in
+  if (localStorage.getItem('token')) {
+    navigate('/home');
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
     dispatch(signIn(email, password));
+    setTimeout(() => {
+      navigate('/home');
+    }, 1000);
   };
   return (
     <div>
