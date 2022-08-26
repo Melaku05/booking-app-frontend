@@ -40,8 +40,8 @@ const MyReservation = () => {
       {myReservations.data.error === undefined && doctor.data.error === undefined && (
         <div>
           {myReservations.data.map((reservation) => (
-            <div key={reservation.id} className="w-screen flex items-center justify-center m-5 ">
-              <div className="w-full flex items-center justify-around py-5 bg-gradient-to-r from-green-500 to-yellow-700 rounded-lg">
+            <div key={reservation.id} className="w-11/12 mt-5 flex items-center justify-center ">
+              <div className="w-screen flex items-center justify-around py-5 bg-gradient-to-r from-green-500 to-yellow-700 rounded-lg">
                 <img className="rounded-full" src={doctor.data[reservation.doctor_id - 1].photo} alt="doctor" width="100px" height="100px" />
                 <div className="flex items-center mt-7">
                   <div className>
