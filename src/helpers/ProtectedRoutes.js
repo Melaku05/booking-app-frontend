@@ -18,7 +18,9 @@ const ProtectedRoutes = () => {
   return isAuth ? (
     <>
       <Navigation />
-      <Outlet />
+      <div className="xl:ml-72">
+        <Outlet />
+      </div>
     </>
   ) : (
     <Navigate to="/" />
