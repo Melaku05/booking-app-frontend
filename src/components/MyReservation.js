@@ -32,8 +32,8 @@ const MyReservation = () => {
   return (
     <>
       {myReservations.data.error && (
-        <div className="w-full lg:w-2/3 h-64 dark:bg-gray-800 flex justify-center align-center white">
-          <h1>{myReservations.data.error}</h1>
+        <div className="w-80 flex justify-center align-center m-auto mt-20">
+          <h1 className="font-bold text-2xl">{myReservations.data.error}</h1>
         </div>
       )}
 
