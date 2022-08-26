@@ -15,7 +15,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="w-full h-screen px-4 py-16 bg-gradient-to-tl from-doctor to-menu">
+    <div className="w-full h-full px-4 py-16 bg-gradient-to-tl ">
       <div className="flex flex-col items-center justify-center">
         <button type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
           <span className="flex items-center justify-between text-5xl font-bold leading-6 text-orange-500">
@@ -33,7 +33,7 @@ const Signup = () => {
             App
           </span>
         </button>
-        <div className="w-full p-10 mt-16 bg-white rounded-md shadow lg:w-1/3 md:w-1/2">
+        <div className="w-full p-10 mt-16 bg-white rounded-md shadow-2xl lg:w-1/3 md:w-1/2">
           <p aria-label="Login to your account" className="text-2xl font-extrabold leading-6 text-gray-800">
             Sign up
           </p>
@@ -66,7 +66,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="mt-8">
-              <button type="submit" aria-label="create my account" className="w-full py-4 text-sm font-semibold leading-none text-white border rounded-full bg-menu focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none hover:bg-lime-600">
+              <button type="submit" aria-label="create my account" className="w-full py-4 text-sm font-semibold leading-none text-white border rounded-full bg-menu focus:ring-2 focus:ring-offset-2 focus:lime-700 focus:outline-none hover:bg-lime-600">
                 Create my account
               </button>
             </div>
