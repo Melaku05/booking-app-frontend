@@ -19,7 +19,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="fixed flex items-center justify-between w-full p-6 border rounded shadow-lg sm:z-10 bg-navbar xl:hidden sm:border-gray-200 ">
+      <div className="fixed top-0 flex items-center justify-between w-full p-6 border rounded shadow-lg sm:z-10 bg-navbar xl:hidden sm:border-gray-200 ">
         <Link to="/home" type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
           <span className="flex items-center justify-between text-2xl leading-6 text-menu">
             Booking
@@ -53,7 +53,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div id="Main" className={`${show ? 'translate-x-0' : '-translate-x-full'} mt-24 xl:mt-0 bg-navbar border  xl:translate-x-0 shadow xl:rounded fixed h-full top-22 sm:z-20 bg-white transform  ease-in-out xl:ease-linear  transition duration-500 flex justify-between items-start w-full xl:w-64 flex-col `}>
+      <div id="Main" className={`${show ? 'translate-x-0' : '-translate-x-full'} mt-24 xl:mt-0 bg-navbar border  xl:translate-x-0 shadow xl:rounded fixed top-0 h-full top-22 sm:z-20 bg-white transform  ease-in-out xl:ease-linear  transition duration-500 flex justify-between items-start w-full xl:w-64 flex-col `}>
         <div>
           <Link to="/home" type="button" className="flex items-center justify-start hidden w-full p-6 space-x-3 text-white focus:outline-none hover:text-indigo-200 focus:text-indigo-200 xl:block">
             <span className="flex items-center text-xl leading-6 text-menu xl:text-2xl">
