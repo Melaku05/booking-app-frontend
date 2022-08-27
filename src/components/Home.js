@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import Navigation from './Navigation';
 import { getDoctors } from '../redux/doctors/doctors';
 import insta from '../assets/images/insta.png';
 import fb from '../assets/images/fb.png';
@@ -23,7 +22,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <Navigation /> */}
       <div className="flex flex-col items-center justify-center w-full p-6">
         <div className="text-center mt-20 xl:mt-2">
           <h1 className="text-2xl font-black m-0 py-3 leading-4">AVAILABLE DOCTORS</h1>
