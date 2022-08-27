@@ -33,7 +33,7 @@ const Home = () => {
         {doctor.data.error === undefined && (
         <div className="m-0 flex flex-col items-center justify-center w-full lg:flex-row">
           {doctor.data.map((doc) => (
-            <Link to="/details" type="button" key={doc.id} doc={doctor}>
+            <Link to={`/details/${doc.id}`} type="button" key={doc.id}>
               <div className=" rounded shadow-lg px-2 mb-6 flex flex-col items-center justify-center w-full" key={doc.id}>
                 <img src={doc.photo} alt={doc.name} className="w-60 h-60 rounded-full p-1 my-1 bg-slate-100 border-slate-700" />
                 <h2 className="uppercase font-bold my-1">{doc.name}</h2>
