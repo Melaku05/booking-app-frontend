@@ -50,7 +50,7 @@ const Signup = () => {
               <input aria-label="enter username" type="text" className="w-full py-3 pl-3 mt-2 text-xs font-medium leading-none text-gray-800 bg-gray-200 border rounded-full focus:outline-none" placeholder="Enter your username" />
             </div>
             <div>
-              <input aria-label="enter email adress" type="email" className="w-full  py-3 pl-3 mt-8 text-xs font-medium leading-none text-gray-800 bg-gray-200 border rounded-full focus:outline-none" placeholder="Enter your email address" />
+              <input aria-label="enter email adress" type="email" className="w-full py-3 pl-3 mt-8 text-xs font-medium leading-none text-gray-800 bg-gray-200 border rounded-full focus:outline-none" placeholder="Enter your email address" />
             </div>
             <div className="w-full mt-6">
               <div className="relative flex items-center justify-center">
