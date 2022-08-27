@@ -5,6 +5,7 @@ import signinReducer from './login/signin';
 import signUpReducer from './login/signup';
 import doctorReducer from './doctors/doctors';
 import myReservationsReducer from './myReservations/myReservations';
+import reservationsReducer from './Reservations/Reservations';
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     signup: signUpReducer,
     doctor: doctorReducer,
     myReservations: myReservationsReducer,
+    reservations: reservationsReducer,
   },
   middleware: [thunk, logger],
 });
