@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+<<<<<<< HEAD
 import { getDoctors } from '../redux/doctors/doctors';
+=======
+import Navigation from './Navigation';
+import { getDoctors } from '../redux/doctors/doctors';
+import insta from '../assets/images/insta.png';
+import fb from '../assets/images/fb.png';
+import twitter from '../assets/images/twitter.png';
+>>>>>>> dev
 
 const Home = () => {
   const doctor = useSelector((state) => state.doctor);
@@ -9,6 +17,12 @@ const Home = () => {
   useEffect(() => {
     dispatch(getDoctors());
   }, []);
+
+  const social = [
+    { icon: fb },
+    { icon: twitter },
+    { icon: insta },
+  ];
 
   return (
     <>
