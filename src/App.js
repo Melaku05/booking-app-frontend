@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/details" element={<Details />} />
           </Route>
           <Route exact path="/signup" element={<Signup />} />
-          <Route path="*" element={<h1 style={{ textAlign: 'center' }}>404 Page Not Found</h1>} />
+          <Route path="*" element={<h1 className="font-bold text-2xl text-center mt-20">404 Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </>

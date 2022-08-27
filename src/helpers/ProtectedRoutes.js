@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 const useAuth = () => {
   let loggedIn = false;
@@ -14,7 +15,16 @@ const useAuth = () => {
 
 const ProtectedRoutes = () => {
   const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to="/" />;
+  return isAuth ? (
+    <>
+      <Navigation />
+      <div className="xl:ml-72">
+        <Outlet />
+      </div>
+    </>
+  ) : (
+    <Navigate to="/" />
+  );
 };
 
 export default ProtectedRoutes;
