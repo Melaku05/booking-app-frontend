@@ -29,6 +29,9 @@ const signUp = (username, email, password) => (dispatch) => {
       return res.json();
     })
     .then((data) => {
+      if (data.user) {
+        localStorage.setItem('user', JSON.stringify(data));
+      }
       dispatch(signUpRequest(data));
     })
     .catch((err) => {
