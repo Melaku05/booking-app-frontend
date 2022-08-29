@@ -1,18 +1,17 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Booking-app-backend
+# Booking-app-frontend
 
 This app uses a Rails back-end as an API to send doctor details and appointment data to the frontend of a booking application.
 
 Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/main/projects/business_requirements.md) or design and connect your own. Enjoy your Booking App!
 
-## Link to REACT FRONTEND
+## Link to RAILS BACKEND
 
-[REACT FRONTEND](https://github.com/Melaku05/booking-app-frontend)
+[RAILS BACKEND](https://github.com/Melaku05/booking-app-backend)
 
 ## Built With
-- PostgreSQL
-- React-Back-End API
+- Rails-Booking-App API
 - REACT
 - REDUX
 - Thunk
