@@ -31,7 +31,7 @@ const Home = () => {
 
         {doctor.data.error && <h1>{doctor.data.error}</h1>}
         {doctor.data.error === undefined && (
-        <div className="m-0 flex flex-col items-center justify-center w-full lg:flex-row">
+        <div className="m-0 lg:grid lg:grid-cols-3 lg:gap-4 flex flex-col items-center justify-center w-full lg:flex-row">
           {doctor.data.map((doc) => (
             <Link to={`/details/${doc.id}`} type="button" key={doc.id}>
               <div className=" rounded shadow-lg px-2 mb-6 flex flex-col items-center justify-center w-full" key={doc.id}>

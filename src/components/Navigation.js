@@ -133,7 +133,11 @@ const Navigation = () => {
               <img src="https://i.ibb.co/54vKnF3/Ellipse-3.png" alt="avatar" />
             </div>
             <div className="flex flex-col items-start space-y-1 jusitfy-start">
-              <p className="text-base leading-3 font-bold text-gray-500 cursor-pointer capitalize">{userInfo.user.username}</p>
+              <p className="text-base leading-3 font-bold text-gray-500
+               cursor-pointer capitalize"
+              >
+                {userInfo.user.username}
+              </p>
             </div>
           </div>
 
