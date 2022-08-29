@@ -32,38 +32,37 @@ const MyReservation = () => {
   return (
     <>
       {myReservations.data.error && (
-        <div className="w-80 flex justify-center align-center m-auto mt-20">
-          <h1 className="font-bold text-2xl">{myReservations.data.error}</h1>
+        <div className="flex justify-center m-auto mt-20 w-80 align-center">
+          <h1 className="text-2xl font-bold">{myReservations.data.error}</h1>
         </div>
       )}
 
       {myReservations.data.error === undefined && doctor.data.error === undefined && (
-        <div className="mt-32 mb-20 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-32 mb-20">
           {myReservations.data.map((reservation) => (
-            <div key={reservation.id} className="w-11/12 mt-5 flex items-center justify-center ">
-              <div className="w-screen flex flex-col sm:flex-row items-center justify-around py-5 bg-white shadow-lg rounded-lg">
+            <div key={reservation.id} className="flex items-center justify-center w-11/12 mt-5 ">
+              <div className="flex flex-col items-center justify-around w-screen py-5 bg-white rounded-lg shadow-lg sm:flex-row">
                 <div className="w-20">
                   <img className="rounded-full" src={doctor.data[reservation.doctor_id - 1].photo} alt="doctor" />
                 </div>
                 <div className="flex items-center mt-7">
                   <div className>
-                    <p className="text-xs text-grey-400 font-bold">Doctor:</p>
+                    <p className="text-xs font-bold text-grey-400">Doctor:</p>
                     <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">{doctor.data[reservation.doctor_id - 1].name}</p>
                   </div>
                   <div className="ml-12">
-                    <p className="text-xs text-grey-400 font-bold">City:</p>
+                    <p className="text-xs font-bold text-grey-400">City:</p>
                     <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">{reservation.city}</p>
                   </div>
                   <div className="ml-12">
-                    <p className="text-xs text-grey-400 font-bold">Date:</p>
+                    <p className="text-xs font-bold text-grey-400">Date:</p>
                     <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">{reservation.date}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => handleDelete(reservation.id)}
                   type="button"
-                  className="bg-transparent border-red-400 hover:bg-red-500 text-grey-700 font-semibold hover:text-white py-2 px-4 m-7 border border-blue
-                rounded"
+                  className="px-4 py-2 font-semibold bg-transparent border border-red-400 rounded hover:bg-red-500 text-grey-700 hover:text-white m-7 border-blue"
                 >
                   Delete
                 </button>

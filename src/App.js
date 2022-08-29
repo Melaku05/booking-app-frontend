@@ -7,7 +7,6 @@ import Details from './components/Details';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import './App.css';
-
 import ProtectedRoutes from './helpers/ProtectedRoutes';
 
 function App() {
