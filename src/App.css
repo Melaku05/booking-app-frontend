@@ -1,10 +1,15 @@
-.reservationContainer {
-  background:
-    linear-gradient(to right, #96bf01, #85b500),
-    url(./images/doctor.jpg) no-repeat center center;
+
+.reserveBackground {
+  background-image: url("https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .App {
   text-align: center;
+}
+
+.lighter-bg {
+  background-color: rgba(130, 235, 96, 0.8);
 }
