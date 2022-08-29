@@ -26,10 +26,18 @@ const Navigation = () => {
     navigate('/');
   };
 
+  const handleShow = () => {
+    if (show) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
   return (
     <div>
       <div className="fixed top-0 z-10 flex items-center justify-between w-full p-6 border rounded shadow-lg bg-navbar xl:hidden sm:border-gray-200">
-        <Link to="/home" type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
+        <Link to="/home" onClick={() => handleShow()} className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
           <span className="flex items-center justify-between text-2xl leading-6 text-menu">
             Booking
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-vaccine text-doctor" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#7bc62d" fill="orange" strokeLinecap="round" strokeLinejoin="round">
@@ -81,7 +89,7 @@ const Navigation = () => {
             </span>
           </Link>
           <div className="flex flex-col items-center justify-start w-full px-6 mt-4 ">
-            <Link to="/home" type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
+            <Link to="/home" onClick={() => handleShow()} type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-building-hospital" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="3" y1="21" x2="21" y2="21" />
@@ -92,7 +100,7 @@ const Navigation = () => {
               </svg>
               <p className="font-bold leading-4 text-black border-b border-transparent hover:border-doctor focus:border-doctor">DOCTORS</p>
             </Link>
-            <Link to="/reservations" type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
+            <Link to="/reservations" onClick={() => handleShow()} type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-time" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
@@ -104,7 +112,7 @@ const Navigation = () => {
               </svg>
               <p className="font-bold leading-4 text-black border-b border-transparent hover:border-doctor focus:border-white ">RESERVE</p>
             </Link>
-            <Link to="/myreservation" type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
+            <Link to="/myreservation" onClick={() => handleShow()} type="button" className="flex items-center w-full py-3 space-x-6 font-bold text-black rounded focus:outline-none focus:bg-menu jusitfy-start hover:bg-menu ">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-checks" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M7 12l5 5l10 -10" />
