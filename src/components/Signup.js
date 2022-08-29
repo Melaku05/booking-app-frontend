@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signUp } from '../redux/login/signup';
 
 const Signup = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +13,9 @@ const Signup = () => {
     const email = e.target[1].value;
     const password = e.target[2].value;
     dispatch(signUp(username, email, password));
+    setTimeout(() => {
+      navigate('/home');
+    }, 700);
   };
 
   return (

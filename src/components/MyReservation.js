@@ -33,12 +33,13 @@ const MyReservation = () => {
     <>
       {myReservations.data.error && (
         <div className="flex justify-center m-auto mt-20 w-80 align-center">
-          <h1 className="text-2xl font-bold">{myReservations.data.error}</h1>
+          <h1 className="text-2xl font-black m-0 py-3 mt-20 leading-4 uppercase ">{myReservations.data.error}</h1>
         </div>
       )}
 
       {myReservations.data.error === undefined && doctor.data.error === undefined && (
         <div className="flex flex-col items-center justify-center mt-32 mb-20">
+          <h1 className="text-2xl font-black m-0 py-3 leading-4">ALL RESERVATIONS</h1>
           {myReservations.data.map((reservation) => (
             <div key={reservation.id} className="flex items-center justify-center w-11/12 mt-5 ">
               <div className="flex flex-col items-center justify-around w-screen py-5 bg-white rounded-lg shadow-lg sm:flex-row">
@@ -59,11 +60,7 @@ const MyReservation = () => {
                     <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">{reservation.date}</p>
                   </div>
                 </div>
-                <button
-                  onClick={() => handleDelete(reservation.id)}
-                  type="button"
-                  className="px-4 py-2 font-semibold bg-transparent border border-red-400 rounded hover:bg-red-500 text-grey-700 hover:text-white m-7 border-blue"
-                >
+                <button onClick={() => handleDelete(reservation.id)} type="button" className="px-4 py-2 font-semibold bg-transparent border border-red-400 rounded hover:bg-red-500 text-grey-700 hover:text-white m-7 border-blue">
                   Delete
                 </button>
               </div>

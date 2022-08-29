@@ -13,3 +13,21 @@
 .lighter-bg {
   background-color: rgba(130, 235, 96, 0.8);
 }
+
+.mobileWidth {
+  width: 88vw;
+}
+
+.mobilePadding {
+  padding: 0 6vw;
+}
+
+@media screen  and (min-width: 1024px) {
+  .mobileWidth {
+    width: 100%;
+  }
+
+  .mobilePadding {
+    padding: 0 0;
+  }
+}
