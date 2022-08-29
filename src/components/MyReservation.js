@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMyReservations } from '../redux/myReservations/myReservations';
 import { getDoctors } from '../redux/doctors/doctors';
+import url from '../helpers/ApiUrl';
 
 const MyReservation = () => {
   const myReservations = useSelector((state) => state.myReservations);
@@ -20,7 +21,7 @@ const MyReservation = () => {
         Authorization: localStorage.getItem('token'),
       },
     };
-    fetch(`http://localhost:3000/reservations/${id}`, params)
+    fetch(`${url}reservations/${id}`, params)
       .then(() => {
         dispatch(getMyReservations());
       })

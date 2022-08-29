@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 /* Install pure-react-carousel using -> npm i pure-react-carousel */
 import { Link, useNavigate } from 'react-router-dom';
+import url from '../helpers/ApiUrl';
 
 const Navigation = () => {
   const current = new Date();
@@ -10,7 +11,7 @@ const Navigation = () => {
   const userInfo = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
   const handleSignOut = () => {
-    fetch('http://localhost:3000/users/sign_out', {
+    fetch(`${url}users/sign_out`, {
       method: 'DELETE',
       headers: {
         'Content-Type': '*/*',

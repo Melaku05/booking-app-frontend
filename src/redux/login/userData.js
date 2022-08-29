@@ -1,3 +1,5 @@
+import url from '../../helpers/ApiUrl';
+
 const GET_USERS = 'booking-app-frontend/login/GET_USERS';
 
 // Action Creators
@@ -9,11 +11,14 @@ const getUsers = (user) => ({
 });
 
 const fetchUsers = () => (dispatch) => {
-  fetch('http://localhost:3000/users')
+  fetch(`${url}users`)
     .then((res) => res.json())
-    .then((users) => dispatch(getUsers(users)).catch((err) => {
+    .then((users) => {
+      dispatch(getUsers(users));
+    })
+    .catch((err) => {
       throw new Error(err);
-    }));
+    });
 };
 
 // Reducer

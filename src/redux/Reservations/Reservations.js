@@ -1,3 +1,5 @@
+import url from '../../helpers/ApiUrl';
+
 const GET_RESERVATIONS = 'booking-app-frontend/doctor/GET_RESERVATIONS';
 
 // Action Creators
@@ -25,7 +27,7 @@ const getReservations = (city, doctorId, date) => (dispatch) => {
       },
     }),
   };
-  fetch('http://localhost:3000/reservations', params)
+  fetch(`${url}reservations`, params)
     .then((res) => res.json())
     .then((data) => {
       dispatch(reservationsRequest(data));
