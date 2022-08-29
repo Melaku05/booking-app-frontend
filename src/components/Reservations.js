@@ -24,18 +24,18 @@ const Reservations = () => {
     <>
       <div className="reserveBackground ">
         <div className="flex flex-col items-center justify-center flex-grow w-full h-screen px-3 lighter-bg backdrop-blur-sm">
-          <div className="mb-3 text-6xl font-bold text-white ">
-            <h2 className="">Please Make Your Reservation</h2>
+          <div className="mb-3 text-4xl font-bold text-white ">
+            <h2 className="text-center">Please Make Your Reservation</h2>
             <hr className="text-3xl " />
           </div>
-          <em className="mb-20 text-2xl text-white">
+          <em className="mb-5 text-2xl text-white">
             {' '}
             We know your time is important.
             Book your appointment with certainty today!
           </em>
           <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col items-center">
             <div className="flex items-center justify-center bg-transparent" style={{ fontFamily: '"Lato", sans-serif' }}>
-              <div className="flex flex-col items-center px-4 py-8 form-input xl:flex-row">
+              <div className="flex flex-col items-center px-4 py-8 form-input xl:flex-row xl:space-x-4">
                 {/* Code block starts */}
                 <div className="flex flex-col">
                   <div className="relative">
@@ -50,7 +50,7 @@ const Reservations = () => {
                       </svg>
 
                     </div>
-                    <input type="text" id="city" name="city" className="flex items-center w-64 h-16 pl-16 font-normal text-white bg-transparent border border-gray-300 rounded-full shadow form-input dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-l placeholder:text-white placeholder:pl-4" placeholder="City" />
+                    <input type="text" id="city" name="city" className="flex items-center w-64 h-16 pl-16 font-normal text-white bg-green-500 border border-gray-300 rounded-full shadow form-input dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-l placeholder:text-white placeholder:pl-1" placeholder="City" />
                   </div>
                 </div>
                 {/* Code block ends */}
@@ -67,7 +67,7 @@ const Reservations = () => {
                         <circle cx="20" cy="10" r="2" />
                       </svg>
                     </div>
-                    <select id="doctor" name="doctor" className="flex items-center w-64 h-16 pl-16 font-normal text-white bg-transparent border border-gray-300 rounded-full shadow dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-l">
+                    <select id="doctor" name="doctor" className="flex items-center w-64 h-16 pl-16 font-normal text-white bg-green-500 border border-gray-300 rounded-full shadow dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-l">
                       {doctor.data.map((doctor) => (
                         <option key={doctor.id} value={doctor.id}>{doctor.name}</option>))}
                       ;
@@ -76,7 +76,7 @@ const Reservations = () => {
                 </div>
                 {/* Code block ends */}
                 {/* Code block starts */}
-                <div className="flex flex-col py-4">
+                <div className="flex flex-col">
                   <div className="relative">
                     <div className="absolute flex items-center h-full px-4 text-white bg-indigo-700 border-r rounded-l-full cursor-pointer dark:border-gray-700 dark:bg-indigo-600">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -88,7 +88,7 @@ const Reservations = () => {
                         <rect x="8" y="15" width="2" height="2" />
                       </svg>
                     </div>
-                    <input type="date" id="date" name="date" className="flex items-center w-64 h-16 pl-16 font-normal text-white bg-transparent border border-gray-300 rounded-full shadow form-input dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-L" />
+                    <input type="date" id="date" name="date" className="flex items-center w-64 h-16 pl-16 pr-2 font-normal text-white bg-green-500 border border-gray-300 rounded-full shadow form-input dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 text-L" />
                   </div>
                 </div>
               </div>
