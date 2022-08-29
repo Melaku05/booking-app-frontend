@@ -23,7 +23,7 @@ const Reservations = () => {
   return (
     <>
       <div className="reserveBackground ">
-        <div className="flex flex-col items-center justify-center flex-grow w-full h-screen lighter-bg backdrop-blur-sm">
+        <div className="flex flex-col items-center justify-center flex-grow w-full h-screen px-3 lighter-bg backdrop-blur-sm">
           <div className="mb-3 text-6xl font-bold text-white ">
             <h2 className="">Please Make Your Reservation</h2>
             <hr className="text-3xl " />
@@ -35,9 +35,9 @@ const Reservations = () => {
           </em>
           <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col items-center">
             <div className="flex items-center justify-center bg-transparent" style={{ fontFamily: '"Lato", sans-serif' }}>
-              <div className="flex flex-col items-center px-4 py-8 form-input md:flex-row">
+              <div className="flex flex-col items-center px-4 py-8 form-input xl:flex-row">
                 {/* Code block starts */}
-                <div className="flex flex-col md:mr-16">
+                <div className="flex flex-col">
                   <div className="relative">
                     <div className="absolute flex items-center h-full pl-4 cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-building-community" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -55,7 +55,7 @@ const Reservations = () => {
                 </div>
                 {/* Code block ends */}
                 {/* Code block starts */}
-                <div className="flex flex-col py-4 md:mr-16 md:py-0">
+                <div className="flex flex-col py-4">
                   <div className="relative">
                     <div className="absolute flex items-center h-full px-4 text-gray-600 border-r cursor-pointer dark:text-gray-400 dark:border-gray-700">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-stethoscope" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -76,7 +76,7 @@ const Reservations = () => {
                 </div>
                 {/* Code block ends */}
                 {/* Code block starts */}
-                <div className="flex flex-col py-4 md:py-0">
+                <div className="flex flex-col py-4">
                   <div className="relative">
                     <div className="absolute flex items-center h-full px-4 text-white bg-indigo-700 border-r rounded-l-full cursor-pointer dark:border-gray-700 dark:bg-indigo-600">
                       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
