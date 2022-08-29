@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
 /* Install pure-react-carousel using -> npm i pure-react-carousel */
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { signOut } from '../redux/login/signout';
 
 const Navigation = () => {
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
   const [show, setShow] = useState(false);
-  const dispatch = useDispatch();
 
   const userInfo = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
   const handleSignOut = () => {
-    dispatch(signOut());
+    fetch('http://localhost:3000/users/sign_out', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': '*/*',
+        Authorization: localStorage.getItem('token'),
+      },
+    })
+      .then(() => {
+        localStorage.clear();
+      })
+      .catch((err) => {
+        throw new Error(err);
+      });
     navigate('/');
   };
 
