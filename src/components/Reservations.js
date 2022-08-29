@@ -28,7 +28,7 @@ const Reservations = () => {
             <h2 className="text-center">Please Make Your Reservation</h2>
             <hr className="text-3xl " />
           </div>
-          <em className="mb-5 text-2xl text-white">
+          <em className="mb-5 text-2xl text-white sm:text-center">
             {' '}
             We know your time is important.
             Book your appointment with certainty today!
