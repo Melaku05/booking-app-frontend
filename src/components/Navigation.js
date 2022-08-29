@@ -19,7 +19,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="fixed top-0 flex items-center justify-between w-full p-6 border rounded shadow-lg sm:z-10 bg-navbar xl:hidden sm:border-gray-200 ">
+      <div className="fixed top-0 z-10 flex items-center justify-between w-full p-6 border rounded shadow-lg bg-navbar xl:hidden sm:border-gray-200">
         <Link to="/home" type="button" className="flex items-center justify-between space-x-3 text-white hover:text-doctor focus:outline-none focus:text-indigo-200">
           <span className="flex items-center justify-between text-2xl leading-6 text-menu">
             Booking
