@@ -56,6 +56,12 @@ Then run:
 
 Open the project in your favorite code editor. `code .` for VS Code.
 
+### For Local machine please UPDATE your URL
+Change the URL to your backend URL in `./helpers/ApiUrl.js`
+
+ex.
+`const url = 'http://localhost:3000/';`
+
 ### Dependencies
 - Run npm install - to load necessary files from package.json
 
