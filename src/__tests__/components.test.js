@@ -9,7 +9,6 @@ import MyReservation from '../components/MyReservation';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
 import Navigation from '../components/Navigation';
-import NavigationReserve from '../components/NavigationReserve';
 import Reservations from '../components/Reservations';
 
 describe('Create components snapshot', () => {
@@ -29,15 +28,6 @@ describe('Create components snapshot', () => {
       </Provider>,
     );
     expect(asFragment(<MyReservation />)).toMatchSnapshot();
-  });
-
-  it('renders NavigationReserve component snapshot', () => {
-    const { asFragment } = render(
-      <Provider store={store}>
-        <NavigationReserve />
-      </Provider>,
-    );
-    expect(asFragment(<NavigationReserve />)).toMatchSnapshot();
   });
 
   it('renders Reservations component snapshot', () => {
