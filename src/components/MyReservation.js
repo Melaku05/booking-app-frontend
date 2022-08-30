@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMyReservations } from '../redux/myReservations/myReservations';
 import { getDoctors } from '../redux/doctors/doctors';
+import url from '../helpers/ApiUrl';
 
 const MyReservation = () => {
   const myReservations = useSelector((state) => state.myReservations);
@@ -20,7 +21,7 @@ const MyReservation = () => {
         Authorization: localStorage.getItem('token'),
       },
     };
-    fetch(`http://localhost:3000/reservations/${id}`, params)
+    fetch(`${url}reservations/${id}`, params)
       .then(() => {
         dispatch(getMyReservations());
       })
@@ -44,12 +45,28 @@ const MyReservation = () => {
             <div key={reservation.id} className="flex items-center justify-center w-11/12 mt-5 ">
               <div className="flex flex-col items-center justify-around w-screen py-5 bg-white rounded-lg shadow-lg sm:flex-row">
                 <div className="w-20">
-                  <img className="rounded-full" src={doctor.data[reservation.doctor_id - 1].photo} alt="doctor" />
+                  <img
+                    className="rounded-full"
+                    src={doctor.data.map((doc) => {
+                      if (doc.id === reservation.doctor_id) {
+                        return doc.photo;
+                      }
+                      return '';
+                    })}
+                    alt="doctor"
+                  />
                 </div>
                 <div className="flex items-center mt-7">
                   <div className>
                     <p className="text-xs font-bold text-grey-400">Doctor:</p>
-                    <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">{doctor.data[reservation.doctor_id - 1].name}</p>
+                    <p className="mt-2 text-base sm:text-lg md:text-xl 2xl:text-2xl text-grey-400">
+                      {doctor.data.map((doc) => {
+                        if (doc.id === reservation.doctor_id) {
+                          return doc.name;
+                        }
+                        return '';
+                      })}
+                    </p>
                   </div>
                   <div className="ml-12">
                     <p className="text-xs font-bold text-grey-400">City:</p>

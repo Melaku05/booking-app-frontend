@@ -1,3 +1,5 @@
+import url from '../../helpers/ApiUrl';
+
 const GET_DOCTORS = 'booking-app-frontend/doctor/GET_DOCTORS';
 
 // Action Creators
@@ -16,7 +18,7 @@ const getDoctors = () => (dispatch) => {
       Authorization: localStorage.getItem('token'),
     },
   };
-  fetch('http://localhost:3000/doctors', params)
+  fetch(`${url}doctors`, params)
     .then((res) => res.json())
     .then((data) => {
       dispatch(doctorRequest(data));

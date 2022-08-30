@@ -1,3 +1,5 @@
+import url from '../../helpers/ApiUrl';
+
 const SIGNIN_REQUEST = 'booking-app-frontend/signin/SIGNIN_REQUEST';
 
 // Action Creators
@@ -22,7 +24,7 @@ const signIn = (email, password) => (dispatch) => {
       },
     }),
   };
-  fetch('http://localhost:3000/users/sign_in', params)
+  fetch(`${url}users/sign_in`, params)
     .then((res) => {
       if (res.status === 200) {
         localStorage.setItem('token', res.headers.get('Authorization'));

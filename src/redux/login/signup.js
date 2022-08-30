@@ -1,3 +1,5 @@
+import url from '../../helpers/ApiUrl';
+
 const SIGNUP_REQUEST = 'booking-app-frontend/signup/SIGNUP_REQUEST';
 
 // Action Creators
@@ -23,7 +25,7 @@ const signUp = (username, email, password) => (dispatch) => {
       },
     }),
   };
-  fetch('http://localhost:3000/users', params)
+  fetch(`${url}users`, params)
     .then((res) => {
       localStorage.setItem('token', res.headers.get('Authorization'));
       return res.json();
