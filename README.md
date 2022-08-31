@@ -39,6 +39,25 @@ Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/
 
 - [x] Debug linter errors
 
+## Screenshots
+### Desktop version
+![Sign-up Page]()
+![Login Page]()
+![Home Page]()
+![Detail Page]()
+![Reservations Page]()
+![My Reservations Page]()
+
+### Mobile Version 
+![Sign-up Page]()
+![Login Page]()
+![Navigation]()
+![Home Page]()
+![Detail Page]()
+![Reservations Page]()
+![My Reservations Page]()
+
+
 
 ## Getting Started
 
