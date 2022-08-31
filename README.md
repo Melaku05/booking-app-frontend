@@ -49,7 +49,7 @@ Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/
 ![My Reservations Page](src/assets/screenshots/my-d.png)
 
 ### Mobile Version 
-![Sign-up Page]()
+![Sign-up Page](src/assets/screenshots/s-m.png)
 ![Login Page]()
 ![Navigation]()
 ![Home Page]()
