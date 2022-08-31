@@ -1,10 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { signUp } from '../redux/login/signup';
+import url from '../helpers/ApiUrl';
 
 const Signup = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -12,10 +10,35 @@ const Signup = () => {
     const username = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
-    dispatch(signUp(username, email, password));
-    setTimeout(() => {
-      navigate('/home');
-    }, 700);
+    const params = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        user: {
+          username,
+          email,
+          password,
+        },
+      }),
+    };
+    fetch(`${url}users`, params)
+      .then((res) => {
+        localStorage.setItem('token', res.headers.get('Authorization'));
+        return res.json();
+      })
+      .then((data) => {
+        if (data.user) {
+          localStorage.setItem('user', JSON.stringify(data));
+        }
+      })
+      .then(() => {
+        navigate('/home');
+      })
+      .catch((err) => {
+        throw new Error(err);
+      });
   };
 
   return (

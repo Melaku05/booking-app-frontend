@@ -21,10 +21,12 @@ const Navigation = () => {
       .then(() => {
         localStorage.clear();
       })
+      .then(() => {
+        navigate('/');
+      })
       .catch((err) => {
         throw new Error(err);
       });
-    navigate('/');
   };
 
   const handleShow = () => {

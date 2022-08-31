@@ -7,11 +7,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // redirect to home page if user is already logged in
-  if (localStorage.getItem('token')) {
-    navigate('/home');
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target[0].value;
@@ -19,7 +14,7 @@ const Login = () => {
     dispatch(signIn(email, password));
     setTimeout(() => {
       navigate('/home');
-    }, 1000);
+    }, 900);
   };
 
   const [passwordType, setPasswordType] = React.useState('password');
