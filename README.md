@@ -41,7 +41,7 @@ Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/
 
 ## Screenshots
 ### Desktop version
-![Sign-up Page]()
+![Sign-up Page](src/assets/screenshots/s-d.png)
 ![Login Page]()
 ![Home Page]()
 ![Detail Page]()
