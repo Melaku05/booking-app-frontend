@@ -51,7 +51,7 @@ Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/
 ### Mobile Version 
 ![Sign-up Page](src/assets/screenshots/s-m.png)
 ![Login Page](src/assets/screenshots/l-m.png)
-![Navigation]()
+![Navigation](src/assets/screenshots/m-n.png)
 ![Home Page]()
 ![Detail Page]()
 ![Reservations Page]()
