@@ -50,7 +50,6 @@ const Details = () => {
                           <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{doctor.data.find((doctor) => doctor.id === Number(id)).specialization}</td>
                         </tr>
                         <tr className="w-full bg-gray-100 border-b">
-
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"> Fee</td>
                           <td className="">{doctor.data.find((doctor) => doctor.id === Number(id)).fee}</td>
                         </tr>
