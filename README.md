@@ -6,6 +6,9 @@ This app uses a Rails back-end as an API to send doctor details and appointment 
 
 Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/main/projects/business_requirements.md) or design and connect your own. Enjoy your Booking App!
 
+## Live server
+[Demo](https://booking-app1.netlify.app)
+
 ## Link to RAILS BACKEND
 
 [RAILS BACKEND](https://github.com/Melaku05/booking-app-backend)
