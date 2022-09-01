@@ -48,14 +48,12 @@ Connect to our [API](https://github.com/Melaku05/booking-app-backendpstone/blob/
 ![Reservations Page](src/assets/screenshots/r-d.png)
 ![My Reservations Page](src/assets/screenshots/my-d.png)
 
-### Mobile Version 
-![Sign-up Page](src/assets/screenshots/s-m.png)
-![Login Page](src/assets/screenshots/l-m.png)
-![Navigation](src/assets/screenshots/m-n.png)
-![Home Page](src/assets/screenshots/h-m.png)
-![Detail Page](src/assets/screenshots/d-m.png)
-![Reservations Page](src/assets/screenshots/r-m.png)
-![My Reservations Page](src/assets/screenshots/my-m.png)
+### Mobile Version
+||||
+|-|-|-|
+|![Sign-up Page](src/assets/screenshots/s-m.png)|![Login Page](src/assets/screenshots/l-m.png)|![Navigation](src/assets/screenshots/m-n.png)|
+|![Home Page](src/assets/screenshots/h-m.png)|![Detail Page](src/assets/screenshots/d-m.png)|![Reservations Page](src/assets/screenshots/r-m.png)|
+|![My Reservations Page](src/assets/screenshots/my-m.png)|
 
 
 
